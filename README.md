@@ -1,1 +1,3 @@
-##   JavaScript_lessons_project
+##   JavaScript
+
+> lessons and project
