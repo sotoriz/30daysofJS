@@ -1,0 +1,509 @@
+// Exercises: Level 1
+
+const countries = [
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Denmark',
+  'Ethiopia',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Kenya'
+]
+
+const webTechs = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+]
+
+const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+
+//1.  Iterate 0 to 10 using for loop, do the same using while and do while loop
+/*
+for(let i = 0; i <= 10; i++){
+    console.log(i)
+}
+
+let j = 0
+while (j <= 10){
+   console.log(j)
+     j++
+}
+
+let i = 0
+do {
+    console.log(i)
+    i++
+} while (i <= 10)
+*/
+
+//2.  Iterate 10 to 0 using for loop, do the same using while and do while loop
+/*
+for(let a = 10; a >= 0; a--) {
+    console.log(a)
+}
+
+let a = 10
+while (a >= 0) {
+    console.log(a)
+    a--
+}
+
+let b = 10
+do {
+    console.log(b)
+    b--
+} while (b >= 0)
+*/
+
+//3.  Iterate 0 to n using for loop
+/*
+let n = 10
+for (let r = 0; r <= n; r++) {
+    console.log(r)
+}
+*/
+//4.  Write a loop that makes the following pattern using console.log():
+
+ //   #
+ //   ##
+ //   ###
+ //   ####
+ //   #####
+ //   ######
+ //   #######
+/*
+let num = '#'
+for (let i = 1; i < 7; i += 1){ console.log(num);
+ num = num + "#"
+}
+
+let hashtag = "", h = ''
+
+for (let r = 0; r < 7; r++) {
+    hashtag += (h += '#') + '<br>'
+}
+console.log(hashtag)
+*/
+
+for (let i=0; i < 7; i++) {
+    console.log("#".repeat(i+1))
+}
+
+//5.  Use loop to print the following pattern:
+
+//0 x 0 = 0
+//1 x 1 = 1
+//2 x 2 = 4
+//3 x 3 = 9
+//4 x 4 = 16
+//5 x 5 = 25
+//6 x 6 = 36
+//7 x 7 = 49
+//8 x 8 = 64
+//9 x 9 = 81
+//10 x 10 = 100
+
+for (let i = 0; i<= 10; i++){
+    console.log(`${i} * ${i} = ${i * i}`)
+}
+
+
+//6. Using loop print the following pattern
+
+// i    i^2   i^3
+// 0    0     0
+// 1    1     1
+// 2    4     8
+// 3    9     27
+// 4    16    64
+// 5    25    125
+// 6    36    216
+// 7    49    343
+// 8    64    512
+// 9    81    729
+// 10   100   1000
+
+for (let i = 0; i<= 10; i++){
+    console.log(`${i}  ${i**2}  ${i**3}`)
+}
+
+
+//7.  Use for loop to iterate from 0 to 100 and print only even numbers
+/*
+let n = 100
+for (let r = 0; r <= n; r += 2) {
+    console.log(r)
+}
+*/
+
+//8.  Use for loop to iterate from 0 to 100 and print only odd numbers
+/*
+let n = 100
+for (let r = 1; r <= n; r +=2) {
+    console.log(r)
+}
+*/
+//9.  Use for loop to iterate from 0 to 100 and print only prime numbers
+/*
+let count = 0
+let i, j
+
+for(j = 2; j <= 100; j++)
+{
+for(let i = 1; i <= j; i++)
+{
+    if (j % i == 0)
+    count++
+}
+if (count == 2)
+
+console.log(j)
+count = 0
+
+}
+*/
+
+//10.  Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+//The sum of all numbers from 0 to 100 is 5050.
+/*
+let sum = 0
+for(let i = 0; i <= 100; i++)
+sum += i
+
+console.log(sum)
+*/
+//11.  Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+//The sum of all evens from 0 to 100 is 2550. And the sum of all odds from 0 to 100 is 2500.
+/*
+let sum = 0
+for(let i = 0; i <= 100; i +=2)
+sum += i
+
+console.log(sum)
+
+let sum = 0
+for(let i = 1; i <= 100; i +=2)
+sum += i
+
+console.log(sum)
+*/
+//12.  Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
+//  [2550, 2500]
+
+let sum = 0
+for(let i = 0; i <= 100; i +=2)
+sum += i
+
+console.log(sum)
+
+let sum1 = 0
+for(let d = 1; d <= 100; d +=2)
+sum1 += d
+
+console.log(sum1)
+
+let addSums = sum + sum1
+console.log(addSums)
+
+//13.  Develop a small script which generate array of 5 random numbers
+
+let arr = [ ]
+for(let a = 1; a < 6; a++)
+arr.push(Math.floor(Math.random() * 6) +1)
+
+console.log(arr)
+
+//14.  Develop a small script which generate array of 5 random numbers and the numbers must be unique
+/*
+const array = Array(5)
+    .fill()
+    .map(() => Math.floor(20 * Math.random()))
+
+console.log(array)
+*/
+let a = [1,2,3,4,5,6,7,8,9,10,11,12] 
+let n 
+let r = [ ] 
+for (n=1; n<=5; ++n) { 
+let i = Math.floor((Math.random() * (12-n)) + 1) 
+
+r.push(a[i]) 
+a[i] = a[12-n] 
+}
+console.log(r)
+
+//15.  Develop a small script which generate a six characters random id:
+//5j2khz
+
+const characters = '5j2khz' 
+let result = ''
+const leng = characters.length
+for(let c = 0; c < leng; c++) {
+    result += characters.charAt(Math.floor(Math.random() * leng))
+}
+
+console.log(result)
+
+
+//Exercises: Level 2
+
+//1.  Develop a small script which generate any number of characters random id:
+//  fe3jo1gl124g
+//  xkqci4utda1lmbelpkm03rba
+
+let numChar = 'fe3jo1gl124g'
+let numChar1 = 'xkqci4utda1lmbelpkm03rba'
+
+let numCharAll = "numChar" + "numChar1"
+let solution = ''
+let lengRange = numCharAll.length
+for (let b = 0; b < 8; b++)
+solution += numCharAll.charAt(Math.floor(Math.random() * lengRange))
+
+console.log(solution)
+console.log(solution)
+
+//2.  Write a script which generates a random hexadecimal number.
+// '#ee33df'
+
+    const getHex = () => { // Define an array of hexadecimal digits 
+const hexChars = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 
+]; 
+// Generate an array of six random indices from 0 to 15
+    const hexIndices = Array.from({ length: 6 }, () => Math.floor(Math.random() * 16) 
+     );
+// Map each index to its corresponding hex digit and join them into a string 
+    const hexCode = hexIndices.map((i) => hexChars[i]).join(''); 
+// Return the string with a "#" prefix 
+    return `#${hexCode}`;
+ }; 
+console.log(getHex())
+console.log(getHex())
+
+/*
+function makeid(l)
+{
+let text = "";
+const char_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+for(let i=0; i < l; i++ )
+{  
+text += char_list.charAt(Math.floor(Math.random() * char_list.length));
+}
+return text;
+}
+console.log(makeid(7));
+*/
+
+//3.  Write a script which generates a random rgb color number.
+// rgb(240,180,80)
+
+    const randomRgbColor = () =>{ 
+    let r = Math.floor(Math.random() * 256) // Random between 0-255 
+    let g = Math.floor(Math.random() * 256) // Random between 0-255 
+    let b = Math.floor(Math.random() * 256) // Random between 0-255 
+    return 'rgb(' + r + ',' + g + ',' + b + ')' 
+} 
+
+// Create some random colors
+console.log(randomRgbColor())
+console.log(randomRgbColor())
+
+//4.  Using the above countries array, create the following new array.
+// ["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+
+const arrCount = []
+for(const country of countries)
+arrCount.push(country.toUpperCase())
+console.log(arrCount)
+/*
+// other methods 1
+let coun = [ ]
+countries.forEach(element => {
+    coun.push(element.toUpperCase())
+})
+console.log(coun)
+
+//method 2
+const arrCounts = []
+for(let d = 0; d < countries.length; d++)
+arrCounts.push(countries[d].toUpperCase())
+console.log(arrCounts)
+*/
+
+//5.  Using the above countries array, create an array for countries length'.
+// [7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+
+for (let i=0;i<countries.length;i++){
+    console.log(countries[i].length) 
+}
+
+//6.  Use the countries array to create the following array of arrays:
+//   [
+//  ['Albania', 'ALB', 7],
+//  ['Bolivia', 'BOL', 7],
+//  ['Canada', 'CAN', 6],
+//  ['Denmark', 'DEN', 7],
+//  ['Ethiopia', 'ETH', 8],
+//  ['Finland', 'FIN', 7],
+//  ['Germany', 'GER', 7],
+//  ['Hungary', 'HUN', 7],
+//  ['Ireland', 'IRE', 7],
+//  ['Iceland', 'ICE', 7],
+//  ['Japan', 'JAP', 5],
+//  ['Kenya', 'KEN', 5]
+//]
+
+let countriesAbrev = countries.map(country => [country, country.slice(0, 3).toUpperCase(), country.length])
+
+console.log(countriesAbrev)
+
+
+//7.  In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+// ['Finland','Ireland', 'Iceland']
+
+let countriesWithLand = [];
+
+for (let i = 0; i < countries.length; i++) {
+  if (countries[i].includes('land')) {
+    countriesWithLand.push(countries[i]);
+  }
+}
+
+if (countriesWithLand.length > 0) {
+  console.log(countriesWithLand)
+} else {
+  console.log("All these countries are without land");
+}
+
+//8.  In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
+// ['Albania', 'Bolivia','Ethiopia']
+
+let countriesWithIa = []
+
+for (let i = 0; i < countries.length; i++) {
+  if (countries[i].includes('ia')) {
+    countriesWithIa.push(countries[i]);
+  }
+}
+
+if (countriesWithIa.length > 0) {
+  console.log(countriesWithIa)
+} else {
+  console.log("These are countries  ends without ia");
+}
+
+//9.  Using the above countries array, find the country containing the biggest number of characters.
+// Ethiopia
+
+let longestCountry = countries[0]
+for(let i = 0; i < countries.length; i++) {
+    if (countries[i].length > longestCountry.length) {
+        longestCountry = countries[i]
+    }
+}
+
+console.log("The country with the most character is:" +longestCountry)
+
+
+//10.  Using the above countries array, find the country containing only 5 characters.
+// ['Japan', 'Kenya']
+
+let fiveCharCountry = []
+for (let i = 0; i< countries.length; i++) {
+    if (countries[i].length === 5) {
+        fiveCharCountry.push(countries[i])
+    }
+}
+console.log(fiveCharCountry)
+
+
+//11.  Find the longest word in the webTechs array
+
+let longestWebtechs = webTechs[0]
+for(let i = 0; i < webTechs.length; i++) {
+    if (webTechs[i].length > longestWebtechs.length) {
+        longestWebtechs = webTechs[i]
+    }
+}
+// longest word in webTechs
+console.log(longestWebtechs)
+
+//12.  Use the webTechs array to create the following array of arrays:
+// [["HTML", 4], ["CSS", 3],["JavaScript", 10],["React", 5],["Redux", 5],["Node", 4],["MongoDB", 7]]
+
+let webtechsAbrev = webTechs.map(webTech => [webTech, webTechs.length])
+
+console.log(webtechsAbrev)
+
+//13.  An application created using MongoDB, Express, React and Node is called a MERN stack app. Create the acronym MERN by using the array mernStack
+
+const MERN = mernStack.join("")
+
+console.log(MERN)
+
+//14.  Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+/*
+let skills  = ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
+for (let i= 0; i < skills.length; i++)
+console.log(skills[i])
+
+for(const skill of skills)
+console.log(skill)
+*/
+
+//15.  This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+
+//16.  Print all the elements of array as shown below.
+
+// HTML
+//  CSS
+//  JS
+//  REACT
+//  NODE
+//  EXPRESS
+//  MONGODB
+
+//console.log(fullstack)
+const fullStack = [ ['HTML', 'CSS', 'JS', 'React'],['Node', 'Express', 'MongoDB']
+]
+
+for (const stack of fullStack){
+    for(const element of stack){
+        console.log(element)
+    }
+}
+/*
+for(let i = 0; i < fullStack.length; i++) {
+    console.log(fullStack.())
+}
+*/
+// Exercises: Level 3
+
+
+//1.  Copy countries array(Avoid mutation)
+
+//2.  Arrays are mutable. Create a copy of array which does not modify the original. Sort the copied array and store in a variable sortedCountries
+
+//3.  Sort the webTechs array and mernStack array
+
+//4.  Extract all the countries contain the word 'land' from the countries array and print it as array
+
+//5.  Find the country containing the hightest number of characters in the countries array
+
+//6.  Extract all the countries contain the word 'land' from the countries array and print it as array
+
+//7.  Extract all the countries containing only four characters from the countries array and print it as array
+
+//8.  Extract all the countries containing two or more words from the countries array and print it as array
+
+//9.  Reverse the countries array and capitalize each country and stored it as an array
+
